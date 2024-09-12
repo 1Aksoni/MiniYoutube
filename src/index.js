@@ -2,15 +2,15 @@
 
 // alternate of above 
 import dotenv from "dotenv";
-
+import express from 'express';
 import connectDB from "./db/index.js";
 
 // This is the part of the first import statement
 dotenv.config({
-    path: './env'
+    path: './.env'
 })
 
-
+const app = express();
 // It returns a Promise thats why we use then and catch here and also we connect it with the port 
 connectDB()
 .then(()=>{
@@ -21,7 +21,7 @@ connectDB()
           throw error;
      })
     app.listen(process.env.PORT || 8000,()=>{
-        console.log(`Server is running at port : ${process.env.PORT}`);
+        console.log(`\n Server is running at port : ${process.env.PORT}`);
     })
 })
 .catch((err) => {
