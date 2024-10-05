@@ -59,6 +59,6 @@ Follow the steps below to set up the project locally:
 | DELETE | `/videos/:videoId`        | Delete a video                  |
 | PATCH  | `/videos/:videoId/publish`| Toggle video publish status      |
 
-##Contributing
+
  Contributions are welcome! Fork the repo, make changes, and submit a pull request.
 
